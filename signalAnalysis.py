@@ -97,3 +97,8 @@ def mel_frequency_cepstral_coefficients(windowed_signal_flat, rate=48000):
                        nfilt=24, nfft=960,
                        lowfreq=0, highfreq=4000, preemph=0.96)
     return mfcc_result
+
+
+def removesilence(signal):
+    signal = signal[20700:53700]
+    return signal

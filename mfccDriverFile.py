@@ -22,7 +22,7 @@ upperfreq = 5000
 
 # REMOVING THE SILENCE AT BEGINNING AND ENDING OF THE SIGNAL
 entireSignal = signal
-signal = signal[20700:53700]
+signal = dsp.removesilence(signal)
 last_sample = len(signal)
 last_sample_entireSignal = len(entireSignal)
 
